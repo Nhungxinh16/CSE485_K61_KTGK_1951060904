@@ -51,7 +51,7 @@
                                 <td>".$row["reci_bqnty"]."mL</td>
                                 <td>".$row["reci_reg_date"]."</td>
                                 <td><a href='detail.php?id=".$row["reci_id"]."'>Xem chi tiết</a></td>
-                                <td><a href='update.php'>Sửa</a></td>
+                                <td><a href='update.php?id=".$row["reci_id"]."'>Sửa</a></td>
                                 <td><a href='delete.php?id=".$row["reci_id"]."'>Xóa</a></td>
                             </tr>
                         ";
