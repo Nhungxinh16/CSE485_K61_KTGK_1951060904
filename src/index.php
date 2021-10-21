@@ -4,6 +4,18 @@
 ?>
     <div class="container">
         <h2 class="text-center" style="margin-top: 40px; margin-bottom:24px;">Quản lý người nhận máu</h2>
+        <?php
+            if(isset($_SESSION["success"])){
+                $success = $_SESSION["success"];
+                echo "
+                    <div class='alert alert-success'>
+                        <strong>$success</strong>
+                    </div>
+                ";
+                unset($_SESSION["success"]);
+            }
+        ?>
+        
         <button type="button" class="btn btn-primary" style="margin-bottom: 12px"><a href="add.php" class="text-white">Thêm</a></button>
         <table class="table text-center">
             <thead class="bg-dark text-white">
@@ -40,7 +52,7 @@
                                 <td>".$row["reci_reg_date"]."</td>
                                 <td><a href='detail.php?id=".$row["reci_id"]."'>Xem chi tiết</a></td>
                                 <td><a href='update.php'>Sửa</a></td>
-                                <td><a href='delete.php'>Xóa</a></td>
+                                <td><a href='delete.php?id=".$row["reci_id"]."'>Xóa</a></td>
                             </tr>
                         ";
                     }
