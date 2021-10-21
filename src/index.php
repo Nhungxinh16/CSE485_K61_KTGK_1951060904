@@ -3,7 +3,7 @@
     require("config/constants.php");
 ?>
     <div class="container">
-        <h2 class="text-center" style="margin-top: 40px; margin-bottom:24px;">Quản lý người hiến máu</h2>
+        <h2 class="text-center" style="margin-top: 40px; margin-bottom:24px;">Quản lý người nhận máu</h2>
         <button type="button" class="btn btn-primary" style="margin-bottom: 12px"><a href="add.php" class="text-white">Thêm</a></button>
         <table class="table text-center">
             <thead class="bg-dark text-white">
@@ -38,7 +38,7 @@
                                 <td>".$row["reci_phno"]."</td>
                                 <td>".$row["reci_bqnty"]."mL</td>
                                 <td>".$row["reci_reg_date"]."</td>
-                                <td><a href='detail.php'>Xem chi tiết</a></td>
+                                <td><a href='detail.php?id=".$row["reci_id"]."'>Xem chi tiết</a></td>
                                 <td><a href='update.php'>Sửa</a></td>
                                 <td><a href='delete.php'>Xóa</a></td>
                             </tr>
